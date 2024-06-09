@@ -1,0 +1,22 @@
+﻿@using AlterSome.Models
+@model List<Alter>
+
+<link href="~/Content/css/Card.css" rel="stylesheet" />
+
+<h2>Alternative App for Free List</h2>
+
+@foreach (var item in Model)
+{
+    <div class="mainBox">
+        <img src="@item.ImageApp" alt="img" height="225px" width="225px" />
+        <div class="text">
+            <h2>@item.Name</h2>
+            <P>
+                 @item.Description
+            </P>
+            <a class="btn btn-danger" href="@item.LinkUrl">
+                Download
+            </a>
+        </div>
+    </div>
+}
